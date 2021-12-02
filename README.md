@@ -1,20 +1,6 @@
-# BBC-GNL-FEATURES-PWA-E2E
+# STORYWORKS
 
 ## Installation
-
-Requirements:
-
-- Node 16
-- Yarn
-- Docker
-
-### For use
-
-1. Clone the repository
-2. `yarn`
-3. e.g. `yarn cypress:headless:test --config video=false`
-
-### For development
 
 1. Download and install Visual Studio Code (https://code.visualstudio.com/download)
 2. Download and install Node.js (https://nodejs.org/en/download)
@@ -48,6 +34,8 @@ Linux & Windows: File > Preferences > File Icon Theme > VSCode Icons
 
 MacOS: Code > Preferences > File Icon Theme > VSCode Icons
 
+12. Quit and repopen Visual Studio Code
+
 ## Local Usage
 
 The file 'package.json' contains the commands to run scripts, and these are all declared in 'scripts' object. Each command is run from the terminal and must be prefixed with `yarn`, for example `yarn cypress:test`
@@ -61,35 +49,6 @@ The file 'package.json' contains the commands to run scripts, and these are all 
 7. `cypress:test:record:regression` Runs the feature file(s) tagged with @Regression in a Chrome browser, against the Test environment, and records using Cypress Dashboard
 8. `report` Exports a HTML report (stored in report/HTML) of the last executed test run. A test run must be executed first, before this command can be used.
 9. `delete:reports` Delete all reports from the reports folder
-
-### To build a docker container
-
-Download and install Docker Desktop (https://www.docker.com/products/docker-desktop)
-
-Clone the repository, and then in the top directory:
-```
-sh docker-build.sh
-docker run -it pwa-e2e
-```
-
-### To run on CI (AWS Codebuild)
-
-```
-yarn ci:test
-```
-This will run the acceptance tests against test features site.
-
-Watch the #aws-ci slack channel to see progress.
-
-CI builds can be viewed (and manually kicked off if you wish) here:
-
-https://eu-west-2.console.aws.amazon.com/codesuite/codebuild/projects/FeaturesE2E
-
-Reports are here (and linked in the slack channel):
-
-https://eu-west-2.console.aws.amazon.com/codesuite/codebuild/testReports/reportGroups/FeaturesE2E-Acceptance
-
-N.B. There is some work to be done to kick these tests off when Features is deployed to test...
 <br>
 <br>
 <br>

@@ -1,5 +1,5 @@
 {
-  "name": "bbc-gnl-pwa-e2e",
+  "name": "storyworks",
   "version": "1.7.1",
   "private": true,
   "license": "MIT",
@@ -18,8 +18,7 @@
     "cypress:headless:test": "TAGS='@Regression and not @ignore' CYPRESS_env=test CYPRESS_baseUrl=https://www.test.bbc.com cypress run --headless",
     "cypress:headless:localhost": "TAGS='@Regression and not @ignore' CYPRESS_env=test CYPRESS_baseUrl=http://localhost.bbc.com:3000 cypress run --headless",
     "report": "node .tools/exportHTMLReport.js",
-    "delete:reports": "rm -rf test-results/cypress/JSON/* || true; rm -rf test-results/cypress/HTML/* || true; rm -rf cypress/videos/features/* || true",
-    "ci:test": "aws --profile \"gnl-common\" codebuild start-build --project-name \"FeaturesE2E\""
+    "delete:reports": "rm -rf test-results/cypress/JSON/* || true; rm -rf test-results/cypress/HTML/* || true; rm -rf cypress/videos/features/* || true"
   },
   "resolutions": {
     "lodash": "^4.17.12",
